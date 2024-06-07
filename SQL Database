@@ -1,0 +1,12 @@
+CREATE TABLE SurveyData (
+    ID INT PRIMARY KEY IDENTITY(1,1),
+    FullName VARCHAR(50) NOT NULL,
+    Email VARCHAR(255) NOT NULL,
+    DateOfBirth DATE NOT NULL,
+    ContactNumber VARCHAR(20) NOT NULL,
+    FavoriteFoods VARCHAR(50),
+    Movies INT,
+    Radio INT,
+    Eat_out INT,
+	TV INT
+);
