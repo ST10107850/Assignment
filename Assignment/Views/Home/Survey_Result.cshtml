@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+@{
+    ViewData["Title"] = "Survey Result";
+    // Assuming you have a model named SurveyResultData with properties to display the survey results
+    var surveyResults = ViewData.Model as Assignment.Models.SurveyResultData;
+}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #007bff;
+        }
+
+        .result-item {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        /* Additional Styles */
+        .result-item {
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f1f1f1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+            .result-item h2 {
+                font-size: 18px;
+            }
+
+            .result-item p {
+                font-size: 16px;
+                color: #007bff;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>@ViewData["Title"]</h1>
+        <div class="result-item">
+            <h2>Total number of surveys</h2>
+            <p>@surveyResults.TotalSurveys</p>
+        </div>
+        <div class="result-item">
+            <h2>Average Age</h2>
+            <p>@surveyResults.AverageAge</p>
+        </div>
+        <div class="result-item">
+            <h2>Oldest person who participated in survey</h2>
+            <p>@surveyResults.OldestAge</p>
+        </div>
+        <div class="result-item">
+            <h2>Youngest person who participated in survey</h2>
+            <p>@surveyResults.YoungestAge</p>
+        </div>
+        <div class="result-item">
+            <h2>Percentage of people who like Pizza</h2>
+            <p>@surveyResults.PizzaPercentage%</p>
+        </div>
+        <div class="result-item">
+            <h2>Percentage of people who like Pasta</h2>
+            <p>@surveyResults.PastaPercentage%</p>
+        </div>
+        <div class="result-item">
+            <h2>Percentage of people who like Pap and Wors</h2>
+            <p>@surveyResults.PapAndWorsPercentage%</p>
+        </div>
+        <div class="result-item">
+            <h2>People who like to watch movies</h2>
+            <p>@surveyResults.MoviesFans</p>
+        </div>
+        <div class="result-item">
+            <h2>People who like to listen to radio</h2>
+            <p>@surveyResults.RadioFans</p>
+        </div>
+        <div class="result-item">
+            <h2>People who like to eat out</h2>
+            <p>@surveyResults.EatOutFans</p>
+        </div>
+        <div class="result-item">
+            <h2>People who like to watch TV</h2>
+            <p>@surveyResults.TvFans</p>
+        </div>
+    </div>
+</body>
+</html>
